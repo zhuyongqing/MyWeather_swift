@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ZYWeatherView" customModule="MyWeather_swift" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MbC-F4-d0g">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="169" id="8SV-7G-HKO"/>
+                        <constraint firstAttribute="width" constant="200" id="P4T-e9-oVc"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="8SV-7G-HKO"/>
+                            <exclude reference="P4T-e9-oVc"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="8SV-7G-HKO"/>
+                            <include reference="P4T-e9-oVc"/>
+                        </mask>
+                    </variation>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEt-3O-sHC">
+                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="aw3-0w-OKD"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="45"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="aw3-0w-OKD"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="aw3-0w-OKD"/>
+                        </mask>
+                    </variation>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SvA-1z-N6P">
+                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="41" id="7Ol-cJ-ReZ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="7Ol-cJ-ReZ"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="7Ol-cJ-ReZ"/>
+                        </mask>
+                    </variation>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mI8-TU-hpc">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <animations/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="mI8-TU-hpc" secondAttribute="trailing" id="16f-am-Jz2"/>
+                <constraint firstItem="mI8-TU-hpc" firstAttribute="top" secondItem="SvA-1z-N6P" secondAttribute="bottom" constant="22" id="5XO-BE-Py6">
+                    <variation key="widthClass=compact" constant="37"/>
+                </constraint>
+                <constraint firstItem="SvA-1z-N6P" firstAttribute="trailing" secondItem="WEt-3O-sHC" secondAttribute="trailing" id="DZi-Ro-Jmc"/>
+                <constraint firstItem="WEt-3O-sHC" firstAttribute="trailing" secondItem="MbC-F4-d0g" secondAttribute="trailing" id="Hgq-d5-uk7"/>
+                <constraint firstItem="MbC-F4-d0g" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="57" id="Lyh-TG-Uab"/>
+                <constraint firstItem="MbC-F4-d0g" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="V1Z-pb-Hab"/>
+                <constraint firstItem="mI8-TU-hpc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ijT-Z1-l3g"/>
+                <constraint firstAttribute="bottom" secondItem="mI8-TU-hpc" secondAttribute="bottom" constant="147" id="r6P-Gx-uTj">
+                    <variation key="widthClass=compact" constant="184"/>
+                </constraint>
+                <constraint firstItem="WEt-3O-sHC" firstAttribute="leading" secondItem="MbC-F4-d0g" secondAttribute="leading" id="vAV-Ws-Obj"/>
+                <constraint firstItem="SvA-1z-N6P" firstAttribute="top" secondItem="WEt-3O-sHC" secondAttribute="bottom" constant="8" id="wNh-0L-mw5">
+                    <variation key="widthClass=compact" constant="14"/>
+                </constraint>
+                <constraint firstItem="WEt-3O-sHC" firstAttribute="top" secondItem="MbC-F4-d0g" secondAttribute="bottom" constant="21" id="wrf-3s-GYc">
+                    <variation key="widthClass=compact" constant="-11"/>
+                </constraint>
+                <constraint firstItem="SvA-1z-N6P" firstAttribute="leading" secondItem="WEt-3O-sHC" secondAttribute="leading" id="xGE-LO-uKK"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="MbC-F4-d0g"/>
+                    <exclude reference="WEt-3O-sHC"/>
+                    <exclude reference="SvA-1z-N6P"/>
+                    <exclude reference="mI8-TU-hpc"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="DZi-Ro-Jmc"/>
+                    <exclude reference="wNh-0L-mw5"/>
+                    <exclude reference="xGE-LO-uKK"/>
+                    <exclude reference="Hgq-d5-uk7"/>
+                    <exclude reference="vAV-Ws-Obj"/>
+                    <exclude reference="wrf-3s-GYc"/>
+                    <exclude reference="Lyh-TG-Uab"/>
+                    <exclude reference="V1Z-pb-Hab"/>
+                    <exclude reference="16f-am-Jz2"/>
+                    <exclude reference="5XO-BE-Py6"/>
+                    <exclude reference="ijT-Z1-l3g"/>
+                    <exclude reference="r6P-Gx-uTj"/>
+                </mask>
+            </variation>
+            <variation key="widthClass=compact">
+                <mask key="subviews">
+                    <include reference="MbC-F4-d0g"/>
+                    <include reference="WEt-3O-sHC"/>
+                    <include reference="SvA-1z-N6P"/>
+                    <include reference="mI8-TU-hpc"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="DZi-Ro-Jmc"/>
+                    <include reference="wNh-0L-mw5"/>
+                    <include reference="xGE-LO-uKK"/>
+                    <include reference="Hgq-d5-uk7"/>
+                    <include reference="vAV-Ws-Obj"/>
+                    <include reference="wrf-3s-GYc"/>
+                    <include reference="Lyh-TG-Uab"/>
+                    <include reference="V1Z-pb-Hab"/>
+                    <include reference="16f-am-Jz2"/>
+                    <include reference="5XO-BE-Py6"/>
+                    <include reference="ijT-Z1-l3g"/>
+                    <include reference="r6P-Gx-uTj"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="backView" destination="mI8-TU-hpc" id="ABe-1Q-nMq"/>
+                <outlet property="cityLabel" destination="SvA-1z-N6P" id="9TA-6R-20U"/>
+                <outlet property="weatherImage" destination="MbC-F4-d0g" id="mch-rN-M3N"/>
+                <outlet property="weatherLabel" destination="WEt-3O-sHC" id="PJq-2h-9kn"/>
+            </connections>
+            <point key="canvasLocation" x="282" y="258"/>
+        </view>
+    </objects>
+</document>
